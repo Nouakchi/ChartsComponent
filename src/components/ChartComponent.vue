@@ -22,7 +22,8 @@ const props = defineProps({
 })
 
 onMounted( () =>{
-    const newChart = new Chart(
+    // eslint-disable-next-line no-new
+    new Chart(
         document.getElementById(props.id),
         {
           type: props.type,

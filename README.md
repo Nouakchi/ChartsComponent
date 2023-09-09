@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+# Vue.js + Vite + Chart.js Component
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A Vue.js component that allows you to display multiple customizable charts using Chart.js.
 
-## Recommended IDE Setup
+## Installation
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Follow these steps to install and use this component in your Vue.js project.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) (Node Package Manager) should be installed on your system.
+
+### Step 1: Create a Vue.js + Vite project
+
+If you don't already have a Vue.js + Vite project, you can create one using the Vue CLI and Vite preset:
+
+```bash
+npm install -g create-vite
+create-vite my-vite-chart-project --template vue
+cd my-vite-chart-project
+
