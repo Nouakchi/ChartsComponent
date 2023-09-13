@@ -1,24 +1,24 @@
 <script setup>
-import { ref, onServerPrefetch, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import ChartComponent from './components/ChartComponent.vue';
 import axios from 'axios'
 
 
 const info = ref(null)
 
-onMounted(async () => {
-  if (!data.value) {
+// onMounted(async () => {
+//   if (!data.value) {
     
-    data.value = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
-                            .then(response => {
-                              info.value = response;
-                              console.log('[' + info.data + ']');
-                            })
-                            .catch(error => {
-                              console.error('Error:', error);
-                            });
-  }
-})
+//     data.value = await axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+//                             .then(response => {
+//                               info.value = response;
+//                               console.log('[' + info.data + ']');
+//                             })
+//                             .catch(error => {
+//                               console.error('Error:', error);
+//                             });
+//   }
+// })
 
 const labels = ['WASHINGTON', 'OREGON', 'CALIFORNIA', 'NEVADA', 'IDAHO', 'MONTANA', 'WYOMING'];
 
@@ -119,7 +119,6 @@ const options = {
 <template>
   <body>
    <div class="container">
-    {{ info.data.bpi.USD.description }}
     <div class="child">
       <ChartComponent
         v-for="item in charts1.element"
